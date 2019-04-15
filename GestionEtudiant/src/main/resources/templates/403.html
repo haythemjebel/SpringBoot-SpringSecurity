@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="Utf-8" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous" />
+<title>Votre Banque</title>
+</head>
+<body>
+	<div class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+				<li><a th:href="@{/operations}">Operations</a></li>
+				<li><a th:href="@{/compte}">Comptes</a></li>
+				<li><a th:href="@{/clients}">Clients</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a th:href="@{/login?logout}">logout</a></li>
+				<!-- th:href="@{/login?logout}" -->
+			</ul>
+		</div>
+	</div>
+	<div class="col-md-6 col-md-offset-3">
+		<div class="panel panel-primary">
+			<div class="panel-heading">Probleme d'authorisation</div>
+			<div class="panel-body">
+				<div style="color: red;">Vous n'avez pas le droit d'acceder a cette ressource</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="navbar-fixed-bottom">
+		<div class="container">
+			<small> Copyright@JEBEL</small>
+		</div>
+	</footer>
+</body>
+</html>
